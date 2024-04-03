@@ -9,7 +9,7 @@ with col1:
     st.write("[Contact Us]()")
 
 with col2:
-    st.title("The Best Company")
+    st.header("The Best Company")
 
     content = """
     AI startups often emerge from the intersection of technology, data, and entrepreneurship to address various 
@@ -18,7 +18,7 @@ with col2:
     """
     st.write(content)
 
-    st.header("Our Team")
+    st.subheader("Our Team")
     col3, col4, col5 = st.columns([2, 2, 2])
 
     # read the csv file
@@ -26,21 +26,24 @@ with col2:
 
     with col3:
         for index, row in df[:4].iterrows():
-            name = row["first name"] + " " +row["last name"]
-            st.title(name)
+            # name = row["first name"] + " " +row["last name"]
+            # st.title(name)
+            st.subheader(f'{row["first name"].title()} {row["last name"].title()}')
             st.text(row["role"])
             st.image("images/"+ row["image"])
 
     with col4:
         for index, row in df[4:8].iterrows():
-            name = row["first name"] + " " + row["last name"]
-            st.title(name)
+            # name = row["first name"] + " " + row["last name"]
+            # st.title(name)
+            st.subheader(f'{row["first name"].title()} {row["last name"].title()}')
             st.text(row["role"])
             st.image("images/" + row["image"])
 
     with col5:
         for index, row in df[8:].iterrows():
-            name = row["first name"] + " " + row["last name"]
-            st.title(name)
+            # name = row["first name"] + " " + row["last name"]
+            # st.title(name)
+            st.subheader(f'{row["first name"].title()} {row["last name"].title()}')
             st.text(row["role"])
             st.image("images/" + row["image"])
