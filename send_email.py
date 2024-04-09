@@ -6,7 +6,7 @@ def send_mail(message):
     host = "smtp.gmail.com"
     port = 465
     username = "anulscloud01@gmail.com"
-    password = "cigz vfcq iuwm vvmh"
+    password = "<app password>"
     receiver = "anulscloud01@gmail.com"
     context = ssl.create_default_context()
     # message = "Hello"
